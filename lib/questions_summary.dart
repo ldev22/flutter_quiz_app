@@ -2,7 +2,7 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_quiz_app/summary_item.dart';
 
 class QuestionsSummary extends StatelessWidget {
-  QuestionsSummary({super.key, required this.summaryData});
+  const QuestionsSummary(this.summaryData, {super.key});
 
   final List<Map<String, Object>> summaryData;
   @override

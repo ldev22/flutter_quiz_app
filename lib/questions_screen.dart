@@ -40,7 +40,7 @@ class _QuestionsScreenState extends State<QuestionsScreen> {
           children: [
             Text(
               currentQuestion.text,
-              style: GoogleFonts.climateCrisis(
+              style: GoogleFonts.comicNeue(
                   color: Colors.white,
                   fontSize: 25,
                   fontWeight: FontWeight.bold),

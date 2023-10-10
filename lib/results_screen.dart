@@ -4,7 +4,8 @@ import 'package:flutter_quiz_app/questions_summary.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class ResultsScreen extends StatelessWidget {
-  const ResultsScreen({super.key, required this.chosenAnswers. required this.onRestart});
+  const ResultsScreen(
+      {super.key, required this.chosenAnswers, required this.onRestart});
 
   final List<String> chosenAnswers;
   final void Function() onRestart;
@@ -28,11 +29,7 @@ class ResultsScreen extends StatelessWidget {
     final summaryData = getSummaryData();
     final numberOfTotalQuestions = questions.length;
     final numberOfCorrectQuestions = summaryData.where((data) {
-      if (data['user_answer'] == data['correct_answer']) {
-        return true;
-      } else {
-        return false;
-      }
+      return data['user_answer'] == data['correct_answer'];
     }).length;
     return SizedBox(
       width: double.infinity,
@@ -43,7 +40,7 @@ class ResultsScreen extends StatelessWidget {
           children: [
             Text(
               'You answered $numberOfCorrectQuestions out of $numberOfTotalQuestions questions correctly',
-              style: GoogleFonts.climateCrisis(
+              style: GoogleFonts.comicNeue(
                   color: Colors.white,
                   fontSize: 20,
                   fontWeight: FontWeight.bold),
@@ -51,7 +48,7 @@ class ResultsScreen extends StatelessWidget {
             const SizedBox(
               height: 30,
             ),
-            QuestionsSummary(summaryData: getSummaryData()),
+            QuestionsSummary(summaryData),
             const SizedBox(
               height: 30,
             ),

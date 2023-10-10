@@ -27,7 +27,7 @@ class StartScreen extends StatelessWidget {
           ),
           Text(
             'Flutter Quiz',
-            style: GoogleFonts.climateCrisis(
+            style: GoogleFonts.comingSoon(
               color: Colors.white,
               fontSize: 45,
             ),

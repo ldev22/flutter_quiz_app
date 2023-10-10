@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class QuestionIcon extends StatelessWidget {
-  QuestionIcon(
+  const QuestionIcon(
       {super.key, required this.isCorrectAnswer, required this.questionIndex});
 
   final int questionIndex;
